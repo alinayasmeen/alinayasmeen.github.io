@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Personal Diary</title>
+</head>
+<body>
+    <header>
+        <h1>My Personal Diary</h1>
+        <nav>
+            <a href="{{ url_for('dashboard') }}">Dashboard</a>
+            <a href="{{ url_for('new_entry') }}">New Entry</a>
+            <a href="{{ url_for('logout') }}">Logout</a>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <img src="{{ url_for('static', filename='img/Disney-Princess-image.png') }}" alt="Disney Princess" width="200">
+        <img src="{{ url_for('static', filename='img/Princess-image1.png') }}" alt="Princess Image 1" width="200">
+        <img src="{{ url_for('static', filename='img/Princess-image2.png') }}" alt="Princess Image 2" width="200">
+    </footer>
+</body>
+</html>
